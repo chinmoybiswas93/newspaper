@@ -1,0 +1,98 @@
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
+  *,
+  ::before,
+  ::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      text-align: center;
+      font-size: 7px;
+  }
+
+  img {
+      width: 100%;
+  }
+
+  h1 {
+      font: 5.4em sans-serif;
+      line-height: 1.1em;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      text-align: left;
+  }
+
+  h2 {
+      font: 4.4em sans-serif;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      line-height: 1.1;
+  }
+
+  #print {
+      width: 600px;
+      margin: auto;
+  }
+
+  .header {
+      border-bottom: 10px solid red;
+      margin-bottom: 10px;
+  }
+
+  /* first news box */
+  .first-news-box {
+      grid-column: 1 / span 4;
+      text-align: justify;
+  }
+
+  .row.first>div {
+      display: flex;
+      gap: 6px;
+  }
+
+  .content p {
+      margin-bottom: 1px;
+      text-indent: 5px;
+  }
+
+  .row.first img {
+      width: calc(50% - 3px);
+      height: auto;
+      object-fit: cover;
+  }
+
+  .row.second {
+      margin-top: 6px;
+  }
+
+  .row.second>div {
+      display: flex;
+      gap: 6px;
+  }
+
+  .row.second .date-data {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 12px;
+      color: black;
+  }
+
+  .row.second .first-image {
+      flex-basis: 72.7%;
+  }
+
+  .row.second .first-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+
+  .row.second .second-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
