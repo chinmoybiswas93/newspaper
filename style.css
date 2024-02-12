@@ -32,6 +32,22 @@
       line-height: 1.1;
   }
 
+  .border {
+      border: 1px solid #f1f1f1;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .indent {
+    text-indent: 10px;
+  }
+
+  .col-sp-3 {
+    grid-column: span 2;
+  }
+
   #print {
       width: 600px;
       margin: auto;
@@ -54,7 +70,7 @@
   }
 
   .content p {
-      margin-bottom: 1px;
+      margin-bottom: 3px;
       text-indent: 5px;
   }
 
@@ -96,4 +112,46 @@
       width: 100%;
       height: auto;
       object-fit: cover;
+  }
+
+  .testimonial blockquote {
+      margin: 0;
+      background: #efefef;
+      padding: 15px 10px 10px;
+      position: relative;
+      border: none;
+      border-radius: 8px;
+      text-indent: 30px;
+  }
+
+
+
+  .testimonial blockquote:before {
+      content: "\201C";
+      position: absolute;
+      font-size: 95px;
+      line-height: 1;
+      color: #ff0000;
+      font-style: normal;
+  }
+
+  .testimonial blockquote:before {
+      top: -20px;
+      left: -35px;
+  }
+
+
+  .testimonial div {
+      width: 0;
+      height: 0;
+      border-left: 0 solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #efefef;
+      margin: 0 0 0 60px;
+  }
+
+  .testimonial p {
+      margin: 8px 0 0 0px;
+      text-align: left;
+      color: #000000;
   }
