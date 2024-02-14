@@ -3,337 +3,652 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="print">
-      <!-- newspaper Header -->
-      <div class="header">
-        <div class="first row">
-          <div>
-            <img src="img/Screenshot_5.png" />
-            <img src="img/Screenshot_1.png" />
-          </div>
-        </div>
-        <div class="second row">
-          <div>
-            <div class="first-image">
-              <img src="img/Screenshot_2.png" />
-            </div>
-            <div class="second-image">
-              <div class="date-data">
-                <p style="margin: 0">Date: Friday, February 9, 2024</p>
-                <p style="margin: 0">Date: Friday, February 9, 2024</p>
+    <div style="display: flex; justify-content: center; gap: 20px">
+      <div id="print-input">
+        <!-- newspaper Header -->
+        <div class="header">
+          <!-- header first row -->
+          <div class="first row">
+            <div>
+              <!-- <img src="img/Screenshot_5.png" /> -->
+              <div class="image-half-input">
+                <form
+                  id="uploadForm"
+                  onsubmit="uploadImageWithEventID(event, 'firstRowLeftImage')"
+                  enctype="multipart/form-data"
+                >
+                  <input type="file" id="fileInput-1" accept="image/*" />
+                  <button type="submit">Upload</button>
+                </form>
               </div>
-              <img src="img/Screenshot_3.png" />
+              <div class="image-half-input">
+                <form
+                  id="uploadForm"
+                  onsubmit="uploadImageWithEventID(event, 'firstRowRightImage')"
+                  enctype="multipart/form-data"
+                >
+                  <input type="file" id="fileInput-2" accept="image/*" />
+                  <button type="submit">Upload</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Header Second row -->
+          <div class="second row">
+            <div>
+              <div class="first-image">
+                <img src="img/Screenshot_2.png" />
+              </div>
+              <div class="second-image">
+                <div class="date-data">
+                  <p style="margin: 0">Date: Friday, February 9, 2024</p>
+                  <p style="margin: 0">Date: Friday, February 9, 2024</p>
+                </div>
+                <img src="img/Screenshot_3.png" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- newspaper body -->
-      <div
-        style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px"
-        class="newspaper-body"
-      >
-        <!-- Start First News Box -->
-        <div class="first-news-box">
-          <div>
-            <p style="font-size: 13px; color: #888">
-              Consectetur adipisicing elit.
-            </p>
-            <h1 style="margin-bottom: 10px; font-weight: 400">
-              Hacen equipo en seguridad Aguascalientes y Durango
-            </h1>
+        <!-- newspaper body -->
+        <div class="newspaper-body grid col-6 gap">
+          <!-- Start First News Box -->
+          <div class="first-news-box">
+            <div>
+              <p style="font-size: 13px; color: #888">
+                Consectetur adipisicing elit.
+              </p>
+              <h1 style="margin-bottom: 10px; font-weight: 400">
+                Hacen equipo en seguridad Aguascalientes y Durango
+              </h1>
+            </div>
+            <div class="content grid col-4 gap">
+              <div>
+                <p
+                  style="
+                    font-size: 9px;
+                    text-align: left;
+                    line-height: 1.5em;
+                    margin-bottom: 8px;
+                    text-indent: 0;
+                  "
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit amet
+                  consectetur.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias repellendus ab minima doloribus nesciunt beatae
+                  tempore consequatur autem aut ullam. Pariatur nobis eveniet,
+                  placeat consequatur molestiae deserunt ipsum quidem eius.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias repellendus ab minima doloribus nesciunt beatae
+                  tempore consequatur autem aut ullam. Pariatur nobis eveniet,
+                  placeat consequatur molestiae deserunt ipsum quidem eius.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
+                  et corrupti hic magnam dolorum dolore beatae, doloribus ut!
+                  Sunt, et!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias repellendus ab minima doloribus nesciunt beatae
+                  tempore consequatur autem aut ullam. Pariatur nobis eveniet,
+                  placeat consequatur molestiae deserunt ipsum quidem eius.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias repellendus ab minima doloribus nesciunt beatae
+                  tempore consequatur autem aut ullam. Pariatur nobis eveniet,
+                  placeat consequatur molestiae deserunt ipsum quidem eius.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit dolor
+                  sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div style="grid-column: 2 / span 4">
+                <div>
+                  <img src="img/Screenshot_4.png" alt="" srcset="" />
+                </div>
+                <div class="grid col-3 gap">
+                  <div style="grid-column: 1 / span 2" class="gap">
+                    <p style="text-indent: 0; margin-top: 2px">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptates, adipisci.
+                    </p>
+                    <div class="grid col-2 gap mt-1">
+                      <div>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos beatae illum, consequatur necessitatibus
+                          molestiae eaque amet atque voluptas nostrum ratione
+                          quaerat, soluta autem enim quos odit ullam commodi
+                          quibusdam magni dolorem!
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos beatae illum, consequatur necessitatibus
+                          molestiae eaque amet atque voluptas nostrum ratione
+                          quaerat, soluta autem enim quos odit ullam commodi
+                          quibusdam magni dolorem!
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. commodi quibusdam magni dolorem!
+                        </p>
+                      </div>
+                      <div>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos beatae illum, consequatur necessitatibus
+                          molestiae eaque amet atque voluptas nostrum ratione
+                          quaerat, soluta autem enim quos odit ullam commodi
+                          quibusdam magni dolorem, ab vero!
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos beatae illum, consequatur necessitatibus
+                          molestiae eaque amet atque voluptas nostrum ratione
+                          quaerat, soluta autem enim quos odit ullam commodi
+                          quibusdam magni dolorem, ab vero! commodi quibusdam
+                          magni dolorem, ab vero quibusdam!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="grid-column: 3 / span 3">
+                    <div class="testimonial">
+                      <blockquote>
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                        dolor auctor. Vivamus sagittis lacus vel augue laoreet
+                        rutrum faucibus dolor auctor. Nulla vitae elit libero, a
+                        pharetra augue.
+                        <p><b>John Doe &mdash; Worcestershire, UK</b></p>
+                      </blockquote>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
           </div>
+          <!-- ENd First NEws Box -->
+
+          <!--Start Second news box -->
           <div
-            style="
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              gap: 8px;
-            "
-            class="content"
+            class="second-news-box"
+            style="grid-column: 5 / span 6; text-align: left"
           >
             <div>
-              <p
-                style="
-                  font-size: 9px;
-                  text-align: left;
-                  line-height: 1.5em;
-                  margin-bottom: 8px;
-                  text-indent: 0;
-                "
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit amet
-                consectetur.
-              </p>
+              <img
+                style="margin-bottom: 3px"
+                src="img/Screenshot_6.png"
+                alt=""
+                srcset=""
+              />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias repellendus ab minima doloribus nesciunt beatae
-                tempore consequatur autem aut ullam. Pariatur nobis eveniet,
-                placeat consequatur molestiae deserunt ipsum quidem eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                sunt qui fuga animi ipsa magni.
               </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias repellendus ab minima doloribus nesciunt beatae
-                tempore consequatur autem aut ullam. Pariatur nobis eveniet,
-                placeat consequatur molestiae deserunt ipsum quidem eius. Lorem
-                ipsum, dolor sit amet consectetur adipisicing elit. Nam et
-                corrupti hic magnam dolorum dolore beatae, doloribus ut! Sunt,
-                et!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias repellendus ab minima doloribus nesciunt beatae
-                tempore consequatur autem aut ullam. Pariatur nobis eveniet,
-                placeat consequatur molestiae deserunt ipsum quidem eius.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias repellendus ab minima doloribus nesciunt beatae
-                tempore consequatur autem aut ullam. Pariatur nobis eveniet,
-                placeat consequatur molestiae deserunt ipsum quidem eius. Lorem
-                ipsum, dolor sit amet consectetur adipisicing elit dolor sit
-                amet consectetur adipisicing elit.
-              </p>
+              <h2>Reconoce Inai acciones del Poder Judicial y del CEC</h2>
+              <br />
             </div>
-            <div style="grid-column: 2 / span 4">
-              <div>
-                <img src="img/Screenshot_4.png" alt="" srcset="" />
+            <div class="grid col-2 text-justify gap">
+              <div class="content">
+                <p>Lorem Ipsum</p>
+                <hr />
+                <p style="margin-top: 5px">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempora at quas earum aperiam quasi minima consectetur.
+                  Ducimus debitis ut pariatur eius! Quo fugit omnis odio,
+                  consectetur sed atque aliquid reiciendis dignissimos error
+                  libero minus, nulla dolores. Velit libero laboriosam amet
+                  maxime dolore, sint tenetur aliquam odit illo labore obcaecati
+                  accusantium ipsum eligendi corporis animi, minima
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
+                  fugit omnis odio Tempora at quas earum aperiam quasi minima
+                  consectetur. Ducimus debitis ut pariatur eius! Quo fugit omnis
+                  odio, consectetur sed atque aliquid reiciendis dignissimos
+                  error libero minus, nulla dolores. atque aliquid reiciendis
+                  dignissimos error.
+                </p>
               </div>
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: repeat(3, 1fr);
-                  gap: 8px;
-                "
-              >
-                <div style="grid-column: 1 / span 2">
-                  <p style="text-indent: 0; margin-top: 2px">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptates, adipisci.
-                  </p>
-                  <div
-                    style="
-                      display: grid;
-                      grid-template-columns: repeat(2, 1fr);
-                      gap: 8px;
-                      margin-top: 5px;
-                    "
-                  >
-                    <div>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eos beatae illum, consequatur necessitatibus molestiae
-                        eaque amet atque voluptas nostrum ratione quaerat,
-                        soluta autem enim quos odit ullam commodi quibusdam
-                        magni dolorem!
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eos beatae illum, consequatur necessitatibus molestiae
-                        eaque amet atque voluptas nostrum ratione quaerat,
-                        soluta autem enim quos odit ullam commodi quibusdam
-                        magni dolorem!
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        commodi quibusdam magni dolorem!
-                      </p>
-                    </div>
-                    <div>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eos beatae illum, consequatur necessitatibus molestiae
-                        eaque amet atque voluptas nostrum ratione quaerat,
-                        soluta autem enim quos odit ullam commodi quibusdam
-                        magni dolorem, ab vero!
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eos beatae illum, consequatur necessitatibus molestiae
-                        eaque amet atque voluptas nostrum ratione quaerat,
-                        soluta autem enim quos odit ullam commodi quibusdam
-                        magni dolorem, ab vero! commodi quibusdam magni dolorem,
-                        ab vero quibusdam!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div style="grid-column: 3 / span 3">
-                  <div class="testimonial">
-                    <blockquote>
-                      Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                      dolor auctor. Vivamus sagittis lacus vel augue laoreet
-                      rutrum faucibus dolor auctor. Nulla vitae elit libero, a
-                      pharetra augue.
-                      <p><b>John Doe &mdash; Worcestershire, UK</b></p>
-                    </blockquote>
-                    <div></div>
-                  </div>
-                </div>
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempora at quas earum aperiam quasi minima consectetur.
+                  Ducimus debitis ut pariatur eius! Quo fugit omnis odio,
+                  consectetur sed atque aliquid reiciendis dignissimos error
+                  libero minus, nulla dolores. Velit libero laboriosam amet
+                  maxime dolore, sint tenetur aliquam odit illo labore obcaecati
+                  accusantium ipsum eligendi corporis animi, minima,
+                  perspiciatis dolorum expedita. Architecto sed itaque porro
+                  eveniet totam!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempora at quas earum aperiam quasi minima consectetur.
+                  Ducimus debitis ut pariatur eius! Quo fugit omnis odio,
+                  consectetur sed atque aliquid reiciendis dignissimos error
+                  libero minus, nulla dolores.
+                </p>
               </div>
             </div>
           </div>
-          <div></div>
-        </div>
-        <!-- ENd First NEws Box -->
+          <!-- End Second News Box -->
 
-        <!--Start Second news box -->
-        <div
-          class="second-news-box"
-          style="grid-column: 5 / span 6; text-align: left"
-        >
-          <div>
-            <img style="margin-bottom: 3px;" src="img/Screenshot_6.png" alt="" srcset="" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              sunt qui fuga animi ipsa magni.
-            </p>
-            <h2>Reconoce Inai acciones del Poder Judicial y del CEC</h2>
-            <br />
+          <!-- Start Third News Box -->
+          <div style="grid-column: 1 / span 3">
+            <img src="img/Screenshot_8.png" alt="" srcset="" />
           </div>
+          <!-- End Third News Box -->
+
+          <!-- Start Fourth News Box -->
           <div
             style="
-              display: grid;
-              grid-template-columns: repeat(2, 1fr);
-              gap: 8px;
+              grid-column: 4 / span 6;
               text-align: justify;
+              margin-top: -75px;
             "
           >
-            <div class="content">
-              <p>Lorem Ipsum</p>
-              <hr />
-              <p style="margin-top: 5px">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Tempora at quas earum aperiam quasi minima consectetur. Ducimus
-                debitis ut pariatur eius! Quo fugit omnis odio, consectetur sed
-                atque aliquid reiciendis dignissimos error libero minus, nulla
-                dolores. Velit libero laboriosam amet maxime dolore, sint
-                tenetur aliquam odit illo labore obcaecati accusantium ipsum
-                eligendi corporis animi, minima
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
-                fugit omnis odio Tempora at quas earum aperiam quasi minima
-                consectetur. Ducimus debitis ut pariatur eius! Quo fugit omnis
-                odio, consectetur sed atque aliquid reiciendis dignissimos error
-                libero minus, nulla dolores. atque aliquid reiciendis
-                dignissimos error.
-              </p>
+            <div class="grid col-3 gap">
+              <div class="col-sp-2 grid col-2">
+                <div class="travel-image" style="grid-column: span 2">
+                  <img src="img/Screenshot_9.png" alt="" srcset="" />
+                </div>
+                <div class="first-col content">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <img src="img/Screenshot_10.png" alt="" />
+                </div>
+                <div class="second-col content">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure?
+                  </p>
+                </div>
+              </div>
+
+              <div class="third-col content">
+                <img
+                  style="margin-bottom: 3px"
+                  src="img/Screenshot_11.png"
+                  alt=""
+                />
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iusto temporibus velit eum iure, quam placeat corporis
+                  molestias libero veniam nisi nihil aut mollitia atque beatae,
+                  dicta ratione nemo, cum consequuntur?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iusto temporibus velit eum iure, quam placeat corporis
+                  molestias libero veniam nisi nihil aut mollitia atque beatae,
+                  dicta ratione nemo, cum consequuntur?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iusto temporibus velit eum iure, quam placeat corporis
+                  molestias libero veniam nisi nihil aut mollitia atque beatae,
+                  dicta ratione nemo, cum consequuntur?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iusto temporibus velit eum iure, quam placeat corporis
+                  molestias libero veniam nisi nihil aut mollitia atque beatae,
+                  dicta ratione nemo, cum consequuntur?
+                </p>
+              </div>
             </div>
-            <div class="content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Tempora at quas earum aperiam quasi minima consectetur. Ducimus
-                debitis ut pariatur eius! Quo fugit omnis odio, consectetur sed
-                atque aliquid reiciendis dignissimos error libero minus, nulla
-                dolores. Velit libero laboriosam amet maxime dolore, sint
-                tenetur aliquam odit illo labore obcaecati accusantium ipsum
-                eligendi corporis animi, minima, perspiciatis dolorum expedita.
-                Architecto sed itaque porro eveniet totam!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Tempora at quas earum aperiam quasi minima consectetur. Ducimus
-                debitis ut pariatur eius! Quo fugit omnis odio, consectetur sed
-                atque aliquid reiciendis dignissimos error libero minus, nulla
-                dolores.
-              </p>
+          </div>
+          <!-- End Fourth News Box -->
+        </div>
+      </div>
+      <div id="print">
+        <!-- newspaper Header -->
+        <div class="header">
+          <!-- header first row -->
+          <div class="first row">
+            <div>
+              <div id="firstRowLeftImage" class="image-half">
+                <img src="img/Screenshot_5.png" />
+              </div>
+              <div id="firstRowRightImage" class="image-half">
+                <img src="img/Screenshot_1.png" />
+              </div>
+            </div>
+          </div>
+          <div class="second row">
+            <div>
+              <div class="first-image">
+                <img src="img/Screenshot_2.png" />
+              </div>
+              <div class="second-image">
+                <div class="date-data">
+                  <p style="margin: 0">Date: Friday, February 9, 2024</p>
+                  <p style="margin: 0">Date: Friday, February 9, 2024</p>
+                </div>
+                <img src="img/Screenshot_3.png" />
+              </div>
             </div>
           </div>
         </div>
-        <!-- End Second News Box -->
+        <!-- newspaper body -->
+        <div class="newspaper-body grid col-6 gap">
+          <!-- Start First News Box -->
+          <div class="first-news-box">
+            <div>
+              <p style="font-size: 13px; color: #888">
+                Consectetur adipisicing elit.
+              </p>
+              <h1 style="margin-bottom: 10px; font-weight: 400">
+                Hacen equipo en seguridad Aguascalientes y Durango
+              </h1>
+            </div>
+            <div class="content grid col-4 gap">
+              <div>
+                <p
+                  style="
+                    font-size: 9px;
+                    text-align: left;
+                    line-height: 1.5em;
+                    margin-bottom: 8px;
+                    text-indent: 0;
+                  "
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit amet
+                  consectetur.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias repellendus ab minima doloribus nesciunt beatae
+                  tempore consequatur autem aut ullam. Pariatur nobis eveniet,
+                  placeat consequatur molestiae deserunt ipsum quidem eius.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias repellendus ab minima doloribus nesciunt beatae
+                  tempore consequatur autem aut ullam. Pariatur nobis eveniet,
+                  placeat consequatur molestiae deserunt ipsum quidem eius.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
+                  et corrupti hic magnam dolorum dolore beatae, doloribus ut!
+                  Sunt, et!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias repellendus ab minima doloribus nesciunt beatae
+                  tempore consequatur autem aut ullam. Pariatur nobis eveniet,
+                  placeat consequatur molestiae deserunt ipsum quidem eius.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias repellendus ab minima doloribus nesciunt beatae
+                  tempore consequatur autem aut ullam. Pariatur nobis eveniet,
+                  placeat consequatur molestiae deserunt ipsum quidem eius.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit dolor
+                  sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div style="grid-column: 2 / span 4">
+                <div>
+                  <img src="img/Screenshot_4.png" alt="" srcset="" />
+                </div>
+                <div class="grid col-3 gap">
+                  <div style="grid-column: 1 / span 2" class="gap">
+                    <p style="text-indent: 0; margin-top: 2px">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptates, adipisci.
+                    </p>
+                    <div class="grid col-2 gap mt-1">
+                      <div>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos beatae illum, consequatur necessitatibus
+                          molestiae eaque amet atque voluptas nostrum ratione
+                          quaerat, soluta autem enim quos odit ullam commodi
+                          quibusdam magni dolorem!
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos beatae illum, consequatur necessitatibus
+                          molestiae eaque amet atque voluptas nostrum ratione
+                          quaerat, soluta autem enim quos odit ullam commodi
+                          quibusdam magni dolorem!
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. commodi quibusdam magni dolorem!
+                        </p>
+                      </div>
+                      <div>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos beatae illum, consequatur necessitatibus
+                          molestiae eaque amet atque voluptas nostrum ratione
+                          quaerat, soluta autem enim quos odit ullam commodi
+                          quibusdam magni dolorem, ab vero!
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Eos beatae illum, consequatur necessitatibus
+                          molestiae eaque amet atque voluptas nostrum ratione
+                          quaerat, soluta autem enim quos odit ullam commodi
+                          quibusdam magni dolorem, ab vero! commodi quibusdam
+                          magni dolorem, ab vero quibusdam!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="grid-column: 3 / span 3">
+                    <div class="testimonial">
+                      <blockquote>
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                        dolor auctor. Vivamus sagittis lacus vel augue laoreet
+                        rutrum faucibus dolor auctor. Nulla vitae elit libero, a
+                        pharetra augue.
+                        <p><b>John Doe &mdash; Worcestershire, UK</b></p>
+                      </blockquote>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <!-- ENd First NEws Box -->
 
-        <!-- Start Third News Box -->
-        <div style="grid-column: 1 / span 3">
-          <img src="img/Screenshot_8.png" alt="" srcset="" />
-        </div>
-        <!-- End Third News Box -->
+          <!--Start Second news box -->
+          <div
+            class="second-news-box"
+            style="grid-column: 5 / span 6; text-align: left"
+          >
+            <div>
+              <img
+                style="margin-bottom: 3px"
+                src="img/Screenshot_6.png"
+                alt=""
+                srcset=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                sunt qui fuga animi ipsa magni.
+              </p>
+              <h2>Reconoce Inai acciones del Poder Judicial y del CEC</h2>
+              <br />
+            </div>
+            <div class="grid col-2 text-justify gap">
+              <div class="content">
+                <p>Lorem Ipsum</p>
+                <hr />
+                <p style="margin-top: 5px">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempora at quas earum aperiam quasi minima consectetur.
+                  Ducimus debitis ut pariatur eius! Quo fugit omnis odio,
+                  consectetur sed atque aliquid reiciendis dignissimos error
+                  libero minus, nulla dolores. Velit libero laboriosam amet
+                  maxime dolore, sint tenetur aliquam odit illo labore obcaecati
+                  accusantium ipsum eligendi corporis animi, minima
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
+                  fugit omnis odio Tempora at quas earum aperiam quasi minima
+                  consectetur. Ducimus debitis ut pariatur eius! Quo fugit omnis
+                  odio, consectetur sed atque aliquid reiciendis dignissimos
+                  error libero minus, nulla dolores. atque aliquid reiciendis
+                  dignissimos error.
+                </p>
+              </div>
+              <div class="content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempora at quas earum aperiam quasi minima consectetur.
+                  Ducimus debitis ut pariatur eius! Quo fugit omnis odio,
+                  consectetur sed atque aliquid reiciendis dignissimos error
+                  libero minus, nulla dolores. Velit libero laboriosam amet
+                  maxime dolore, sint tenetur aliquam odit illo labore obcaecati
+                  accusantium ipsum eligendi corporis animi, minima,
+                  perspiciatis dolorum expedita. Architecto sed itaque porro
+                  eveniet totam!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempora at quas earum aperiam quasi minima consectetur.
+                  Ducimus debitis ut pariatur eius! Quo fugit omnis odio,
+                  consectetur sed atque aliquid reiciendis dignissimos error
+                  libero minus, nulla dolores.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Second News Box -->
 
-        <!-- Start Fourth News Box -->
-        <div style="grid-column: 4 / span 6; text-align: justify; margin-top: -75px;">
+          <!-- Start Third News Box -->
+          <div style="grid-column: 1 / span 3">
+            <img src="img/Screenshot_8.png" alt="" srcset="" />
+          </div>
+          <!-- End Third News Box -->
+
+          <!-- Start Fourth News Box -->
           <div
             style="
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 8px;
+              grid-column: 4 / span 6;
+              text-align: justify;
+              margin-top: -75px;
             "
           >
-            <div
-              class="col-sp-3"
-              style="display: grid; grid-template-columns: auto auto; gap: 8px"
-            >
-              <div class="travel-image" style="grid-column: span 2">
-                <img src="img/Screenshot_9.png" alt="" srcset="" />
+            <div class="grid col-3 gap">
+              <div class="col-sp-2 grid col-2">
+                <div class="travel-image" style="grid-column: span 2">
+                  <img src="img/Screenshot_9.png" alt="" srcset="" />
+                </div>
+                <div class="first-col content">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <img src="img/Screenshot_10.png" alt="" />
+                </div>
+                <div class="second-col content">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure, quam placeat corporis
+                    molestias libero veniam nisi nihil aut mollitia atque
+                    beatae, dicta ratione nemo, cum consequuntur?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Iusto temporibus velit eum iure?
+                  </p>
+                </div>
               </div>
-              <div class="first-col content">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iusto temporibus velit eum iure, quam placeat corporis
-                  molestias libero veniam nisi nihil aut mollitia atque beatae,
-                  dicta ratione nemo, cum consequuntur?
-                </p>
-                <img src="img/Screenshot_10.png" alt="" />
-              </div>
-              <div class="second-col content">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iusto temporibus velit eum iure, quam placeat corporis
-                  molestias libero veniam nisi nihil aut mollitia atque beatae,
-                  dicta ratione nemo, cum consequuntur?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iusto temporibus velit eum iure, quam placeat corporis
-                  molestias libero veniam nisi nihil aut mollitia atque beatae,
-                  dicta ratione nemo, cum consequuntur?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iusto temporibus velit eum iure, quam placeat corporis
-                  molestias libero veniam nisi nihil aut mollitia atque beatae,
-                  dicta ratione nemo, cum consequuntur?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iusto temporibus velit eum iure, quam placeat corporis
-                  molestias libero veniam nisi nihil aut mollitia atque beatae,
-                  dicta ratione nemo, cum consequuntur?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Iusto temporibus velit eum iure?
-                </p>
-              </div>
-            </div>
 
-            <div class="third-col content">
-              <img style="margin-bottom: 3px;" src="img/Screenshot_11.png" alt="" />
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
-                temporibus velit eum iure, quam placeat corporis molestias
-                libero veniam nisi nihil aut mollitia atque beatae, dicta
-                ratione nemo, cum consequuntur?
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
-                temporibus velit eum iure, quam placeat corporis molestias
-                libero veniam nisi nihil aut mollitia atque beatae, dicta
-                ratione nemo, cum consequuntur?
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
-                temporibus velit eum iure, quam placeat corporis molestias
-                libero veniam nisi nihil aut mollitia atque beatae, dicta
-                ratione nemo, cum consequuntur?
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
-                temporibus velit eum iure, quam placeat corporis molestias
-                libero veniam nisi nihil aut mollitia atque beatae, dicta
-                ratione nemo, cum consequuntur?
-              </p>
+              <div class="third-col content">
+                <img
+                  style="margin-bottom: 3px"
+                  src="img/Screenshot_11.png"
+                  alt=""
+                />
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iusto temporibus velit eum iure, quam placeat corporis
+                  molestias libero veniam nisi nihil aut mollitia atque beatae,
+                  dicta ratione nemo, cum consequuntur?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iusto temporibus velit eum iure, quam placeat corporis
+                  molestias libero veniam nisi nihil aut mollitia atque beatae,
+                  dicta ratione nemo, cum consequuntur?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iusto temporibus velit eum iure, quam placeat corporis
+                  molestias libero veniam nisi nihil aut mollitia atque beatae,
+                  dicta ratione nemo, cum consequuntur?
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Iusto temporibus velit eum iure, quam placeat corporis
+                  molestias libero veniam nisi nihil aut mollitia atque beatae,
+                  dicta ratione nemo, cum consequuntur?
+                </p>
+              </div>
             </div>
           </div>
+          <!-- End Fourth News Box -->
         </div>
-        <!-- End Fourth News Box -->
       </div>
     </div>
     <div style="margin-top: 10px">
@@ -341,24 +656,6 @@
     </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script> -->
     <script src="html2pdf.js"></script>
-    <script>
-      var btn = document.getElementById("btn");
-      var createpdf = document.getElementById("print");
-      var opt = {
-        margin: 0.1,
-        filename: "pdfcreated.pdf",
-        html2canvas: {
-          scale: 5,
-        },
-        jsPDF: {
-          unit: "in",
-          format: "a4",
-          orientation: "portrait",
-        },
-      };
-      btn.addEventListener("click", function () {
-        html2pdf().set(opt).from(createpdf).save();
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
