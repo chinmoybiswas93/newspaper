@@ -23,8 +23,10 @@ function uploadImageWithEventID(event, containerId) {
 }
 
 function changeTextWithEventID(event, containerId) {
-  console.log(event.target.value);
-  console.log(containerId);
+  var text = event.target.value;
+  var textContainer = document.getElementById(containerId);
+
+  textContainer.innerHTML = text;
 }
 
 var btn = document.getElementById("btn");
