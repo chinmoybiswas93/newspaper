@@ -1,7 +1,7 @@
 function uploadImageWithEventID(event, containerId) {
   event.preventDefault(); // Prevent the default form submission behavior
 
-  let inputID = event.target.children[0].id;
+  let inputID = event.target.id;
 
   var fileInput = document.getElementById(inputID);
   var imageContainer = document.getElementById(containerId);
@@ -20,6 +20,11 @@ function uploadImageWithEventID(event, containerId) {
   };
 
   reader.readAsDataURL(file);
+}
+
+function changeTextWithEventID(event, containerId) {
+  console.log(event.target.value);
+  console.log(containerId);
 }
 
 var btn = document.getElementById("btn");
