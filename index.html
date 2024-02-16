@@ -63,14 +63,14 @@
                       <input
                         type="text"
                         name="secondRowSecondImageTopLeft"
-                        onchange="changeTextWithEventID(event, 'text-input-1')"
+                        onkeyup="changeTextWithEventID(event, 'text-input-1')"
                       />
                     </p>
                     <p style="margin: 0">
                       <input
                         type="text"
                         name="secondRowSecondImageTopLeft"
-                        onchange="changeTextWithEventID(event, 'text-input-2')"
+                        onkeyup="changeTextWithEventID(event, 'text-input-2')"
                       />
                     </p>
                   </div>
@@ -101,26 +101,44 @@
             <!-- Start First News Box -->
             <div class="first-news-box">
               <div>
-                <p style="font-size: 13px; color: #888">
-                  Consectetur adipisicing elit.
+                <p style="font-size: 18px; color: #888">
+                  <label style="margin-bottom: 5px" for="first-news-subtitle"
+                    >Subtitle
+                    <input
+                      style="margin-top: 5px"
+                      id="first-news-subtitle"
+                      type="text"
+                      name="first-news-subtitle"
+                      onkeyup="changeTextWithEventID(event, 'text-input-3')"
+                  /></label>
                 </p>
-                <h1 style="margin-bottom: 10px; font-weight: 400">
-                  Hacen equipo en seguridad Aguascalientes y Durango
+                <h1
+                  style="
+                    margin-bottom: 14px;
+                    font-weight: 400;
+                    margin-top: -4px;
+                  "
+                >
+                  <label for="first-news-title">Title</label>
+                  <input
+                    type="text"
+                    name="first-news-title"
+                    onkeyup="changeTextWithEventID(event, 'text-input-4')"
+                  />
                 </h1>
               </div>
               <div class="content grid col-4 gap">
                 <div>
-                  <p
-                    style="
-                      font-size: 9px;
-                      text-align: left;
-                      line-height: 1.5em;
-                      margin-bottom: 8px;
-                      text-indent: 0;
-                    "
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit amet
-                    consectetur.
+                  <p class="first-col-sub-heading">
+                    <label for="first-news-first-paragraph"
+                      >Starting Paragraph</label
+                    >
+                    <textarea
+                      name="first-news-first-paragraph"
+                      id="first-news-first-paragraph"
+                      rows="6"
+                      onkeyup="changeTextWithEventID(event, 'text-input-5')"
+                    ></textarea>
                   </p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -148,19 +166,35 @@
                     Molestias repellendus ab minima doloribus nesciunt beatae
                     tempore consequatur autem aut ullam. Pariatur nobis eveniet,
                     placeat consequatur molestiae deserunt ipsum quidem eius.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit
-                    dolor sit amet consectetur adipisicing elit.
                   </p>
                 </div>
                 <div style="grid-column: 2 / span 4">
-                  <div>
-                    <img src="img/Screenshot_4.png" alt="" srcset="" />
+                  <div style="height: 326px;" class="input-container">
+                    <!-- <img src="img/Screenshot_4.png" alt="" srcset="" /> -->
+                    <form
+                      class="image-upload-form"
+                      enctype="multipart/form-data"
+                    >
+                      <input
+                        class="hidden"
+                        onchange="uploadImageWithEventID(event, 'first-news-image')"
+                        ;
+                        type="file"
+                        id="fileInput-5"
+                        accept="image/*"
+                      />
+                      <label for="fileInput-5"
+                        ><p>Please Select Image</p></label
+                      >
+                    </form>
                   </div>
                   <div class="grid col-3 gap">
                     <div style="grid-column: 1 / span 2" class="gap">
                       <p style="text-indent: 0; margin-top: 2px">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Voluptates, adipisci.
+                        <strong>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Voluptates, adipisci.</strong
+                        >
                       </p>
                       <div class="grid col-2 gap mt-1">
                         <div>
@@ -197,6 +231,7 @@
                             molestiae eaque amet atque voluptas nostrum ratione
                             quaerat, soluta autem enim quos odit ullam commodi
                             quibusdam magni dolorem, ab vero! commodi quibusdam
+                            magni dolorem, ab vero quibusdam! commodi quibusdam
                             magni dolorem, ab vero quibusdam!
                           </p>
                         </div>
@@ -209,7 +244,9 @@
                           faucibus dolor auctor. Vivamus sagittis lacus vel
                           augue laoreet rutrum faucibus dolor auctor. Nulla
                           vitae elit libero, a pharetra augue.
-                          <p><b>John Doe &mdash; Worcestershire, UK</b></p>
+                          <p style="margin-top: 10px">
+                            <b>John Doe &mdash; Worcestershire, UK</b>
+                          </p>
                         </blockquote>
                         <div></div>
                       </div>
@@ -234,16 +271,18 @@
                   srcset=""
                 />
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tempore sunt qui fuga animi ipsa magni.
+                  <strong>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore sunt qui fuga animi ipsa magni.</strong
+                  >
                 </p>
                 <h2>Reconoce Inai acciones del Poder Judicial y del CEC</h2>
                 <br />
               </div>
               <div class="grid col-2 text-justify gap">
                 <div class="content">
-                  <p>Lorem Ipsum</p>
-                  <hr />
+                  <p style="text-indent: 0"><small>Lorem Ipsum</small></p>
+                  <hr style="margin-bottom: 10px" />
                   <p style="margin-top: 5px">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Tempora at quas earum aperiam quasi minima consectetur.
@@ -256,10 +295,7 @@
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Quo fugit omnis odio Tempora at quas earum aperiam quasi
-                    minima consectetur. Ducimus debitis ut pariatur eius! Quo
-                    fugit omnis odio, consectetur sed atque aliquid reiciendis
-                    dignissimos error libero minus, nulla dolores. atque aliquid
-                    reiciendis dignissimos error.
+                    minima consectetur. Ducimus debitis ut pariatur eius!
                   </p>
                 </div>
                 <div class="content">
@@ -277,9 +313,7 @@
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Tempora at quas earum aperiam quasi minima consectetur.
-                    Ducimus debitis ut pariatur eius! Quo fugit omnis odio,
-                    consectetur sed atque aliquid reiciendis dignissimos error
-                    libero minus, nulla dolores.
+                    Ducimus debitis ut pariatur eius!
                   </p>
                 </div>
               </div>
@@ -297,15 +331,18 @@
               style="
                 grid-column: 4 / span 6;
                 text-align: justify;
-                margin-top: -75px;
+                margin-top: -175px;
               "
             >
               <div class="grid col-3 gap">
-                <div class="col-sp-2 grid col-2">
+                <div class="col-sp-2 grid col-2 gap">
                   <div class="travel-image" style="grid-column: span 2">
                     <img src="img/Screenshot_9.png" alt="" srcset="" />
                   </div>
                   <div class="first-col content">
+                    <p class="first-col-sub-heading">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
                     <p>
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Iusto temporibus velit eum iure, quam placeat corporis
@@ -425,24 +462,23 @@
             <!-- Start First News Box -->
             <div class="first-news-box">
               <div>
-                <p style="font-size: 13px; color: #888">
+                <p id="text-input-3" style="font-size: 18px; color: #888">
                   Consectetur adipisicing elit.
                 </p>
-                <h1 style="margin-bottom: 10px; font-weight: 400">
+                <h1
+                  id="text-input-4"
+                  style="
+                    margin-bottom: 14px;
+                    margin-top: -4px;
+                    font-weight: 400;
+                  "
+                >
                   Hacen equipo en seguridad Aguascalientes y Durango
                 </h1>
               </div>
               <div class="content grid col-4 gap">
                 <div>
-                  <p
-                    style="
-                      font-size: 9px;
-                      text-align: left;
-                      line-height: 1.5em;
-                      margin-bottom: 8px;
-                      text-indent: 0;
-                    "
-                  >
+                  <p id="text-input-5" class="first-col-sub-heading">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit amet
                     consectetur.
                   </p>
@@ -472,19 +508,19 @@
                     Molestias repellendus ab minima doloribus nesciunt beatae
                     tempore consequatur autem aut ullam. Pariatur nobis eveniet,
                     placeat consequatur molestiae deserunt ipsum quidem eius.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit
-                    dolor sit amet consectetur adipisicing elit.
                   </p>
                 </div>
                 <div style="grid-column: 2 / span 4">
-                  <div>
+                  <div id="first-news-image" style="height: 326px;">
                     <img src="img/Screenshot_4.png" alt="" srcset="" />
                   </div>
                   <div class="grid col-3 gap">
                     <div style="grid-column: 1 / span 2" class="gap">
                       <p style="text-indent: 0; margin-top: 2px">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Voluptates, adipisci.
+                        <strong>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Voluptates, adipisci.
+                        </strong>
                       </p>
                       <div class="grid col-2 gap mt-1">
                         <div>
@@ -521,6 +557,7 @@
                             molestiae eaque amet atque voluptas nostrum ratione
                             quaerat, soluta autem enim quos odit ullam commodi
                             quibusdam magni dolorem, ab vero! commodi quibusdam
+                            magni dolorem, ab vero quibusdam! commodi quibusdam
                             magni dolorem, ab vero quibusdam!
                           </p>
                         </div>
@@ -533,7 +570,9 @@
                           faucibus dolor auctor. Vivamus sagittis lacus vel
                           augue laoreet rutrum faucibus dolor auctor. Nulla
                           vitae elit libero, a pharetra augue.
-                          <p><b>John Doe &mdash; Worcestershire, UK</b></p>
+                          <p class="margin-top:10px;">
+                            <b>John Doe &mdash; Worcestershire, UK</b>
+                          </p>
                         </blockquote>
                         <div></div>
                       </div>
@@ -558,16 +597,18 @@
                   srcset=""
                 />
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tempore sunt qui fuga animi ipsa magni.
+                  <strong>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore sunt qui fuga animi ipsa magni.</strong
+                  >
                 </p>
                 <h2>Reconoce Inai acciones del Poder Judicial y del CEC</h2>
                 <br />
               </div>
               <div class="grid col-2 text-justify gap">
                 <div class="content">
-                  <p>Lorem Ipsum</p>
-                  <hr />
+                  <p style="text-indent: 0"><small>Lorem Ipsum</small></p>
+                  <hr style="margin-bottom: 10px" />
                   <p style="margin-top: 5px">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Tempora at quas earum aperiam quasi minima consectetur.
@@ -580,10 +621,7 @@
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Quo fugit omnis odio Tempora at quas earum aperiam quasi
-                    minima consectetur. Ducimus debitis ut pariatur eius! Quo
-                    fugit omnis odio, consectetur sed atque aliquid reiciendis
-                    dignissimos error libero minus, nulla dolores. atque aliquid
-                    reiciendis dignissimos error.
+                    minima consectetur. Ducimus debitis ut pariatur eius!
                   </p>
                 </div>
                 <div class="content">
@@ -601,9 +639,7 @@
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Tempora at quas earum aperiam quasi minima consectetur.
-                    Ducimus debitis ut pariatur eius! Quo fugit omnis odio,
-                    consectetur sed atque aliquid reiciendis dignissimos error
-                    libero minus, nulla dolores.
+                    Ducimus debitis ut pariatur eius!
                   </p>
                 </div>
               </div>
@@ -621,15 +657,18 @@
               style="
                 grid-column: 4 / span 6;
                 text-align: justify;
-                margin-top: -75px;
+                margin-top: -175px;
               "
             >
               <div class="grid col-3 gap">
-                <div class="col-sp-2 grid col-2">
+                <div class="col-sp-2 grid gap col-2">
                   <div class="travel-image" style="grid-column: span 2">
                     <img src="img/Screenshot_9.png" alt="" srcset="" />
                   </div>
                   <div class="first-col content">
+                    <p class="first-col-sub-heading">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
                     <p>
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Iusto temporibus velit eum iure, quam placeat corporis

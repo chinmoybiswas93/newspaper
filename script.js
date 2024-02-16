@@ -32,14 +32,14 @@ function changeTextWithEventID(event, containerId) {
 var btn = document.getElementById("btn");
 var createpdf = document.getElementById("print");
 var opt = {
-  margin: [44, 22, 20, 22],
+  margin: [20, 20, 18, 20],
   filename: "pdfcreated.pdf",
   html2canvas: {
-    scale: 5,
+    scale: 6,
   },
   jsPDF: {
-    unit: "px",
-    format: [637, 1280],
+    unit: "mm",
+    format: [270, 480],
     orientation: "portrait",
   },
 };
